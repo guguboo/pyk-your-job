@@ -19,7 +19,7 @@ function App() {
       <br />
       <br />
       <form action="#" onSubmit={handleSubmit}>
-        <label htmlFor="name">Enter your name: &nbsp;</label>
+        <label htmlFor="name" className='text-[100rem]'>Enter your name: &nbsp;</label>
         <input id="name" alt="Name" type="text" />
         <button type="submit">Click Me!</button>
       </form>
