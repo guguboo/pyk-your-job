@@ -12,13 +12,13 @@ function Features(){
         <div style={{
             backgroundImage: `url('/img/features/grid.png')`, 
             backgroundPosition: "center",
-            backgroundSize: "600px 600px",
+            backgroundSize: "680px 680px",
         }} className="bg-no-repeat bg-opacity-0">
 
-            <div className="w-[1500px] mx-auto my-[5%]">
+            <div className="w-[1500px] mx-auto my-[10%]">
                 <section className=" grid grid-cols-[50%,25%,25%] w-full h-full">
                     <div className="text-5xl font-bold tracking-wide"><span>Key<br/>Features</span></div>
-                    <div className="flex flex-col items-center gap-32 justify-center">
+                    <div className="flex flex-col items-center gap-52 justify-center">
                         {description.map((desc, index) => {
                             if(index < description.length-1) return (
                             <FeatureCard key={index} imgUrl={desc[0]} title={desc[1]} content={desc[2]}></FeatureCard>
