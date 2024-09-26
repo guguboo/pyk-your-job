@@ -3,10 +3,11 @@ import { LinearGradient } from 'react-text-gradients'
 
 function Landing(){
     return(
-            <div className="h-full w-[1500px] grid grid-cols-[50%,50%] mx-auto">
-                <img src="/img/landing/cube1.png" id="cube1" className="w-[60rem] absolute top-[10%] left-[60%] z-0"/>
-                <img src="/img/landing/cube2.png" id="cube2" className="w-[35rem] absolute top-[3%] left-[-13%] z-0"/>
-                <div className="flex flex-col font-bold text-[4rem] h-[50rem] z-10 justify-center">
+        
+            <div className="h-[100vh] w-[80rem] grid grid-cols-[70%,30%] mx-auto">
+                <img src="/img/landing/cube1.png" id="cube1" className="w-[60%] absolute top-[7%] left-[60%] z-0"/>
+                <img src="/img/landing/cube2.png" id="cube2" className="w-[30%] absolute top-[5%] left-[-13%] z-0"/>
+                <div className="flex flex-col font-bold text-[4rem] h-full z-10 justify-center">
                     <div>Where the Right Talent</div>
                     <div>
                         <LinearGradient gradient={['to bottom right', '#FFFFFF 25%, #E4C584 57%, #6526CB 71%, #111386 87%, #131316 100%']}>Pyks </LinearGradient>
