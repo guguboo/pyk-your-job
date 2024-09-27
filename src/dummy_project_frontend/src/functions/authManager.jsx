@@ -12,20 +12,21 @@ class AuthManager {
   async init() {
     this.authClient = await AuthClient.create();
     const isAuthenticated = await this.authClient.isAuthenticated();
-    
+
     if (isAuthenticated) {
       await this.handleAuthenticated();
     }
-    
+
     return isAuthenticated;
   }
 
   async login() {
     return new Promise((resolve) => {
       this.authClient.login({
-        identityProvider: process.env.DFX_NETWORK === "ic" 
-          ? "https://identity.ic0.app/#authorize" 
-          : `http://${process.env.CANISTER_ID_INTERNET_IDENTITY}.localhost:4943#authorize`,
+        identityProvider:
+          process.env.DFX_NETWORK === "ic"
+            ? "https://identity.ic0.app/#authorize"
+            : `http://${process.env.CANISTER_ID_INTERNET_IDENTITY}.localhost:4943#authorize`,
         onSuccess: async () => {
           await this.handleAuthenticated();
           resolve(true);
@@ -41,10 +42,10 @@ class AuthManager {
   async handleAuthenticated() {
     const identity = await this.authClient.getIdentity();
     const isLocalDevelopment = process.env.DFX_NETWORK !== "ic";
-    
-    const agent = new HttpAgent({ 
+
+    const agent = new HttpAgent({
       identity,
-      host: isLocalDevelopment ? "http://localhost:4943" : "https://ic0.app"
+      host: isLocalDevelopment ? "http://localhost:4943" : "https://ic0.app",
     });
 
     if (isLocalDevelopment) {
@@ -83,11 +84,11 @@ class AuthManager {
     if (!this.authClient) return false;
     const isAuthClientAuthenticated = await this.authClient.isAuthenticated();
     if (!isAuthClientAuthenticated) return false;
-    
+
     if (!this.actor) {
       await this.handleAuthenticated();
     }
-    
+
     try {
       return await this.actor.isAuthenticated();
     } catch (error) {

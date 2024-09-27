@@ -1,135 +1,68 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   AppstoreOutlined,
-  MailOutlined,
-  SettingOutlined,
+  HomeOutlined,
+  SearchOutlined,
+  AppstoreAddOutlined,
+  ContainerOutlined,
 } from "@ant-design/icons";
 import { Menu } from "antd";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const items = [
   {
-    key: "sub1",
-    label: "Navigation One",
-    icon: <MailOutlined />,
-    children: [
-      {
-        key: "g1",
-        label: "Item 1",
-        type: "group",
-        children: [
-          {
-            key: "1",
-            label: "Option 1",
-          },
-          {
-            key: "2",
-            label: "Option 2",
-          },
-        ],
-      },
-      {
-        key: "g2",
-        label: "Item 2",
-        type: "group",
-        children: [
-          {
-            key: "3",
-            label: "Option 3",
-          },
-          {
-            key: "4",
-            label: "Option 4",
-          },
-        ],
-      },
-    ],
-  },
-  {
-    key: "sub2",
-    label: "Navigation Two",
-    icon: <AppstoreOutlined />,
-    children: [
-      {
-        key: "5",
-        label: "Option 5",
-      },
-      {
-        key: "6",
-        label: "Option 6",
-      },
-      {
-        key: "sub3",
-        label: "Submenu",
-        children: [
-          {
-            key: "7",
-            label: "Option 7",
-          },
-          {
-            key: "8",
-            label: "Option 8",
-          },
-        ],
-      },
-    ],
+    key: "/jobs/home",
+    label: "Home",
+    icon: <HomeOutlined />,
   },
   {
     type: "divider",
   },
   {
-    key: "sub4",
-    label: "Navigation Three",
-    icon: <SettingOutlined />,
+    key: "jobMenu",
+    label: "Jobs",
+    icon: <AppstoreOutlined />,
     children: [
       {
-        key: "9",
-        label: "Option 9",
+        key: "/jobs/find",
+        label: "Discovery",
+        icon: <SearchOutlined />,
       },
       {
-        key: "10",
-        label: "Option 10",
+        key: "/jobs/create",
+        label: "Create Jobs",
+        icon: <AppstoreAddOutlined />,
       },
       {
-        key: "11",
-        label: "Option 11",
-      },
-      {
-        key: "12",
-        label: "Option 12",
-      },
-    ],
-  },
-  {
-    key: "grp",
-    label: "Group",
-    type: "group",
-    children: [
-      {
-        key: "13",
-        label: "Option 13",
-      },
-      {
-        key: "14",
-        label: "Option 14",
+        key: "/jobs/proposal",
+        label: "My Proposal",
+        icon: <ContainerOutlined />,
       },
     ],
   },
 ];
 
 const MenuUser = () => {
+  const [selectedKey, setSelectedKey] = useState(null);
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    console.log(location.pathname);
+    setSelectedKey(location.pathname);
+  }, [location.pathname]);
+
   const onClick = (e) => {
-    console.log("click ", e);
+    // console.log("click ", e);
+    navigate(e.key);
   };
 
   return (
     <Menu
       onClick={onClick}
-      style={{
-        width: 256,
-      }}
       theme="dark"
-      defaultSelectedKeys={["1"]}
-      defaultOpenKeys={["sub1"]}
+      selectedKeys={[selectedKey]}
+      defaultOpenKeys={["jobMenu"]}
       mode="inline"
       items={items}
     />

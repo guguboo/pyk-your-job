@@ -4,12 +4,9 @@ import JobCard from "../components/User/JobCard";
 import Jobs from "../components/User/Jobs";
 import PostedJobs from "../components/User/PostedJobs";
 
-const User = () => {
+const Dashboard = () => {
   return (
-    <div className="flex flex-col lg:flex-row">
-      <div className="flex-none w-full lg:w-1/4 p-4">
-        <MenuUser />
-      </div>
+    <>
       <div className="flex-grow p-4">
         <JobCard />
       </div>
@@ -17,8 +14,8 @@ const User = () => {
         <PostedJobs />
         {/* <Jobs/> */}
       </div>
-    </div>
+    </>
   );
 };
 
-export default User;
+export default Dashboard;
