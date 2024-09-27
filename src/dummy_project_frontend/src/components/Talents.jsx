@@ -1,7 +1,7 @@
 
 function Talents(){
     return(
-            <div className="w-full">
+            <div id="jobs" className="w-full pt-[11rem]">
                 <div className="w-[80rem] mx-auto flex flex-col">
                     <div className="text-5xl font-bold text-center mb-[5%]">Pick Your Talents Now</div>
                     <div className="grid grid-cols-2 justify-center">

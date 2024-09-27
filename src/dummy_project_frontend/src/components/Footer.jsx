@@ -1,6 +1,6 @@
 function Footer(){
     return (
-        <div className="w-full bg-[#FFFFF7] px-[5%] pb-[3%] pt-[5%] text-[#0e0e0e] flex flex-col gap-10">
+        <div className="w-full bg-[#FFFFF7] px-[5%] pb-[3%] pt-[5%] text-[#0e0e0e] flex flex-col gap-10 mt-[12rem]">
             <div className="w-[80rem] mx-auto flex flex-row justify-between">
                 <div className="flex flex-col gap-5">
                     <div className="font-black">PYK</div>
