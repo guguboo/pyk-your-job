@@ -3,6 +3,7 @@ import HashMap "mo:base/HashMap";
 import Error "mo:base/Error";
 import Debug "mo:base/Debug";
 
+
 actor {
   public shared query (msg) func whoami() : async Text {
     Debug.print("Caller: " # Principal.toText(msg.caller));
