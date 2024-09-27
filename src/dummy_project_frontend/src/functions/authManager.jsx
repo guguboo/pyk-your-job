@@ -7,14 +7,17 @@ class AuthManager {
   constructor() {
     this.authClient = null;
     this.actor = null;
-    this.identity = null;
   }
 
   async init() {
     this.authClient = await AuthClient.create();
-    if (await this.authClient.isAuthenticated()) {
+    const isAuthenticated = await this.authClient.isAuthenticated();
+    
+    if (isAuthenticated) {
       await this.handleAuthenticated();
     }
+    
+    return isAuthenticated;
   }
 
   async login() {
@@ -36,11 +39,11 @@ class AuthManager {
   }
 
   async handleAuthenticated() {
-    this.identity = await this.authClient.getIdentity();
+    const identity = await this.authClient.getIdentity();
     const isLocalDevelopment = process.env.DFX_NETWORK !== "ic";
     
     const agent = new HttpAgent({ 
-      identity: this.identity,
+      identity,
       host: isLocalDevelopment ? "http://localhost:4943" : "https://ic0.app"
     });
 
@@ -58,8 +61,6 @@ class AuthManager {
       console.log("Authenticated as:", whoami);
       const authResult = await this.actor.authenticate();
       console.log("Backend authentication result:", authResult);
-      const isAuth = await this.actor.isAuthenticated();
-      console.log("Is authenticated:", isAuth);
     } catch (error) {
       console.error("Backend interaction failed:", error);
     }
@@ -67,13 +68,32 @@ class AuthManager {
 
   async logout() {
     await this.authClient.logout();
+    if (this.actor) {
+      try {
+        await this.actor.logout();
+      } catch (error) {
+        console.error("Backend logout failed:", error);
+      }
+    }
     this.actor = null;
-    this.identity = null;
     console.log("Logged out");
   }
 
   async isAuthenticated() {
-    return this.authClient.isAuthenticated();
+    if (!this.authClient) return false;
+    const isAuthClientAuthenticated = await this.authClient.isAuthenticated();
+    if (!isAuthClientAuthenticated) return false;
+    
+    if (!this.actor) {
+      await this.handleAuthenticated();
+    }
+    
+    try {
+      return await this.actor.isAuthenticated();
+    } catch (error) {
+      console.error("Backend isAuthenticated check failed:", error);
+      return false;
+    }
   }
 
   getActor() {

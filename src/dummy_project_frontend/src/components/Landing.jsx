@@ -1,5 +1,4 @@
-import { LinearGradient } from 'react-text-gradients'
-
+import { LinearGradient } from 'react-text-gradients';
 
 function Landing(){
     return(
