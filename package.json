@@ -17,5 +17,12 @@
   ],
   "devDependencies": {
     "tailwindcss": "^3.4.13"
+  },
+  "dependencies": {
+    "@dfinity/agent": "^2.1.1",
+    "@dfinity/auth-client": "^2.1.1",
+    "@dfinity/candid": "^2.1.1",
+    "@dfinity/identity": "^2.1.1",
+    "@dfinity/principal": "^2.1.1"
   }
 }

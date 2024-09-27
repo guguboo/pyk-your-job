@@ -1,26 +1,27 @@
 {
-  "canisters": {
-    "dummy_project_backend": {
-      "main": "src/dummy_project_backend/main.mo",
-      "type": "motoko"
-    },
-    "dummy_project_frontend": {
-      "dependencies": [
-        "dummy_project_backend"
-      ],
-      "source": [
-        "src/dummy_project_frontend/dist"
-      ],
-      "type": "assets",
-      "workspace": "dummy_project_frontend"
-    }
-  },
-  "defaults": {
-    "build": {
-      "args": "",
-      "packtool": ""
-    }
-  },
-  "output_env_file": ".env",
-  "version": 1
+	"canisters": {
+		"dummy_project_backend": {
+			"main": "src/dummy_project_backend/main.mo",
+			"type": "motoko",
+			"dependencies": ["internet_identity"]
+		},
+		"internet_identity": {
+			"type": "pull",
+			"id": "rdmx6-jaaaa-aaaaa-aaadq-cai"
+		},
+		"dummy_project_frontend": {
+			"dependencies": ["dummy_project_backend"],
+			"source": ["src/dummy_project_frontend/dist"],
+			"type": "assets",
+			"workspace": "dummy_project_frontend"
+		}
+	},
+	"defaults": {
+		"build": {
+			"args": "",
+			"packtool": ""
+		}
+	},
+	"output_env_file": ".env",
+	"version": 1
 }
