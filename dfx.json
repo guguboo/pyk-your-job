@@ -1,5 +1,9 @@
 {
 	"canisters": {
+		"jobs_backend": {
+			"main": "src/jobs_backend/main.mo",
+			"type": "motoko"
+		},
 		"dummy_project_backend": {
 			"main": "src/dummy_project_backend/main.mo",
 			"type": "motoko",
