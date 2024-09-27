@@ -2,6 +2,7 @@ import React from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./pages/home";
 import User from "./pages/User";
+import Login from "./pages/auth/Login";
 // import { dummy_project_backend } from 'declarations/dummy_project_backend';
 
 function App() {
@@ -25,6 +26,10 @@ function App() {
       path: "/jobs",
       element: <User />,
     },
+    // {
+    //   path: "/login",
+    //   element: <Login />
+    // }
   ]);
 
   return (
