@@ -26,10 +26,10 @@ function App() {
       path: "/jobs",
       element: <User />,
     },
-    // {
-    //   path: "/login",
-    //   element: <Login />
-    // }
+    {
+      path: "/login",
+      element: <Login />
+    }
   ]);
 
   return (
