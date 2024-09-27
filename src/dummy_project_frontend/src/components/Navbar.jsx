@@ -1,4 +1,5 @@
-import React, { useContext } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
+import { Link } from "react-scroll";
 import { useNavigate } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
 import { AuthContext } from '../App';
