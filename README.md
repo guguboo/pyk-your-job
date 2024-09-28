@@ -156,8 +156,6 @@ Kami memiliki rencana yang jelas untuk pengembangan PYK ke depan. Berikut adalah
 
 ## Screenshot Fitur Website
 
-#### Get all items
-
 | Landing Page | Dashboard     |
 | :-------- | :------- |
 | ![Image 1](src/dummy_project_frontend/public/img/readme/image1.jpg) | ![Image 2](src/dummy_project_frontend/public/img/readme/image2.jpg) |
