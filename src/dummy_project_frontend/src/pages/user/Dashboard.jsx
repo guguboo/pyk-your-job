@@ -7,7 +7,7 @@ const Dashboard = () => {
 
   return (
     <>
-      <h1 className="text-6xl mb-4">Hello Welcome</h1>
+      <h1 className="text-6xl mb-4">Hello, Welcome to <span className="font-black tracking-wide">PYK</span></h1>
       <p className="text-xl">
         To Start you can choose the menu on the left side
       </p>

@@ -5,6 +5,7 @@ import {
   SearchOutlined,
   AppstoreAddOutlined,
   ContainerOutlined,
+  SolutionOutlined
 } from "@ant-design/icons";
 import { Menu } from "antd";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -37,6 +38,11 @@ const items = [
         key: "/jobs/proposal",
         label: "My Proposal",
         icon: <ContainerOutlined />,
+      },
+      {
+        key: "/jobs/myjobs",
+        label: "My Jobs",
+        icon: <SolutionOutlined />,
       },
     ],
   },

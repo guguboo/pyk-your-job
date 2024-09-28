@@ -15,6 +15,7 @@ import PostJobs from "./pages/user/PostJobs";
 import MyProposal from "./pages/user/MyProposal";
 import UserTemplate from "./components/User/UserTemplate";
 import { ConfigProvider, theme } from "antd";
+import MyJobs from "./pages/user/MyJob";
 
 export const AuthContext = createContext(null);
 
@@ -94,6 +95,10 @@ function App() {
           path: "proposal",
           element: <MyProposal />,
         },
+        {
+          path: "myjobs",
+          element: <MyJobs />,
+        },
       ],
     },
     {
@@ -104,7 +109,7 @@ function App() {
       path: "/404",
       element: <NotFound />,
     },
-    {
+    { 
       path: "*",
       element: <Navigate to="/404" replace />,
     },
@@ -122,7 +127,7 @@ function App() {
         <RouterProvider router={router} />
       </AuthContext.Provider>
     </ConfigProvider>
-  );
+  );  
 }
 
 export default App;

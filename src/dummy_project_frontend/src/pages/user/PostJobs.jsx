@@ -57,7 +57,18 @@ const PostJobs = () => {
 
   return (
     <section className="my-20 mx-40">
-      <Toaster position="top-right" />
+      <Toaster position="top-right" 
+      toastOptions={{
+        style: {
+          background: 'rgba(255, 255, 255, 0.9)',
+          color: '#333',
+          padding: '16px',
+          borderRadius: '8px',
+          fontSize: '16px',
+          maxWidth: '400px',
+          boxShadow: '0 4px 12px rgba(0, 0, 0, 0.15)',
+        },
+      }}/>
       <Title>Create a Jobs</Title>
       <Divider style={{ borderColor: "#fff" }} />
       <Form
@@ -95,7 +106,10 @@ const PostJobs = () => {
         </Form.Item>
         {/* registrationEndDate */}
         <Form.Item label="Registration End Date" name="registrationEndDate">
-          <DatePicker needConfirm presets={datePresets} />
+          <DatePicker needConfirm presets={datePresets} 
+          disabledDate={(current) => {
+            return current && current < dayjs().endOf('day');
+          }}/>
         </Form.Item>
         {/* Submit */}
         <Form.Item>

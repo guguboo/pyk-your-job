@@ -16,7 +16,7 @@ function Landing(){
                             Secure, Fast, and Low Commission.
                     </span>
                     <div className='w-[9rem] h-[2.5rem] text-[1rem] font-light border-[1px] border-white rounded-full hover:bg-white hover:text-[#0e0e0e] transition-all flex justify-center align-middle'>
-                        <div className='my-auto'>Get Started</div>
+                        <a className='my-auto' href="/jobs">Get Started</a>
                     </div>
                 </div>
             </div>
