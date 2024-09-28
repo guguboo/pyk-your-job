@@ -10,6 +10,27 @@ import * as dayjs from "dayjs";
 const { Paragraph } = Typography;
 const { Meta } = Card;
 
+const dates = [
+  "7 October 2024",
+  "31 September 2024 ",
+  "03 October 2024",
+  "7 October 2024",
+  "31 September 2024 ",
+  "03 October 2024",
+  "7 October 2024",
+  "31 September 2024 ",
+  "03 October 2024",
+  "7 October 2024",
+  "31 September 2024 ",
+  "03 October 2024",
+  "7 October 2024",
+  "31 September 2024 ",
+  "03 October 2024",
+  "7 October 2024",
+  "31 September 2024 ",
+  "03 October 2024",
+]
+
 const JobCard = (props) => {
   const {
     key,
@@ -31,7 +52,7 @@ const JobCard = (props) => {
       actions={[<FileAddOutlined key="add" onClick={() => onAddJob(props)} />]}>
       <Meta
         avatar={
-          <Avatar src={`https://api.dicebear.com/7.x/miniavs/svg?seed=${id}`} />
+          <Avatar src={`/img/jobs/avatar${id}.svg`} />
         }
         title={jobTitle}
       />
@@ -46,7 +67,7 @@ const JobCard = (props) => {
         <Tooltip title="Registration End Date">
           <FieldTimeOutlined />
         </Tooltip>
-        {/* {dayjs(registrationEndDate).toString()} */}
+        {dates[id]}
       </div>
       <div className="mb-2" />
       <Paragraph style={{ marginBottom: 0 }}>{description}</Paragraph>
