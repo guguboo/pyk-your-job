@@ -1,13 +1,23 @@
+import { Button, Divider } from "antd";
 import React from "react";
-import PostedJobs from "../../components/User/PostedJobs";
+import { useNavigate } from "react-router-dom";
 
 const Dashboard = () => {
+  const navigate = useNavigate();
+
   return (
     <>
-      <div className="flex-grow p-4">
-        <PostedJobs />
-        {/* <Jobs/> */}
-      </div>
+      <h1 className="text-6xl mb-4">Hello Welcome</h1>
+      <p className="text-xl">
+        To Start you can choose the menu on the left side
+      </p>
+      <Divider />
+      <Button
+        onClick={() => {
+          navigate("/jobs/find");
+        }}>
+        Go to Job Discovery
+      </Button>
     </>
   );
 };

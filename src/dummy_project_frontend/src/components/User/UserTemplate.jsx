@@ -6,7 +6,7 @@ import { Outlet } from "react-router-dom";
 const { Header, Content, Sider } = Layout;
 
 const UserTemplate = (props) => {
-  // const [collapsed, setCollapsed] = useState(false);
+  const [collapsed, setCollapsed] = useState(false);
 
   const siderStyle = {
     overflow: "auto",
@@ -25,17 +25,17 @@ const UserTemplate = (props) => {
       <Sider
         style={siderStyle}
         theme="dark"
-        // collapsible
-        // collapsed={collapsed}
-        // onCollapse={(value) => setCollapsed(value)}
-      >
+        collapsible
+        collapsed={collapsed}
+        onCollapse={(value) => setCollapsed(value)}>
         <div className="h-full flex flex-col justify-center">
           <MenuUser />
         </div>
       </Sider>
       <Layout
         style={{
-          marginInlineStart: 200,
+          marginInlineStart: collapsed ? 80 : 200,
+          transition: "margin 0.2s",
           background: "#0E0E0E",
           color: "#fff",
         }}>

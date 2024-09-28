@@ -13,7 +13,8 @@ body {
   color: #ffffff;
 }
 
-.ant-menu-item-selected {
+.ant-menu-item-selected,
+.ant-layout-sider-trigger {
   background-color: #54a6c7 !important;
 }
 
