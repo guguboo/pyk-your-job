@@ -1,5 +1,3 @@
-![Logo](src\dummy_project_frontend\public\img\readme\PYK Logo.png)
-
 <!-- Logo -->
 
 <br />
