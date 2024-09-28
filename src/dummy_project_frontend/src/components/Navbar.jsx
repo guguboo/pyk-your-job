@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useContext } from "react";
 import { Toaster } from "react-hot-toast";
 import { AuthContext } from "../App";
+import { Link } from "react-scroll";
 
 function Navbar() {
   const { isAuthenticated, handleLogin } = useContext(AuthContext);
@@ -21,18 +22,16 @@ function Navbar() {
         }}
       />
       <div className="font-black">PYK</div>
-      <div className="flex flex-row gap-8 mx-auto text-[1rem] font-bold items-center">
-        <div className="cursor-pointer">Home</div>
-        <div className="cursor-pointer">Jobs</div>
-        <div className="cursor-pointer">How It Works</div>
-      </div>
+            <div className="flex flex-row gap-8 mx-auto text-[1rem] font-bold items-center">
+                <Link smooth={true} duration={500} to="header" className="cursor-pointer">Home</Link>
+                <Link smooth={true} duration={500} to="features" className="cursor-pointer">Key Features</Link>
+                <Link smooth={true} duration={500} to="jobs" className="cursor-pointer">Jobs</Link>
+            </div>
       <div
         className="flex flex-row font-bold items-center text-[1rem] cursor-pointer"
         onClick={handleLogin}>
         {isAuthenticated ? "Log Out" : "Log In"}
       </div>
     </div>
-  );
-}
-
+  );};
 export default Navbar;

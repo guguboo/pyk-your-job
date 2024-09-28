@@ -13,7 +13,7 @@ function Features(){
             backgroundImage: `url('/img/features/grid.png')`, 
             backgroundPosition: "center",
             backgroundSize: "680px 680px",
-        }} className="bg-no-repeat bg-opacity-30 z-0 pt-[12rem]">
+        }} className="bg-no-repeat bg-opacity-30 z-0 mt-[12rem]">
 
             <div className="w-[80rem] mx-auto">
                 <section className=" grid grid-cols-[50%,25%,25%] w-full h-full">
