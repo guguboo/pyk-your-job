@@ -40,6 +40,14 @@ const items = [
       },
     ],
   },
+  // {
+  //   type: "divider",
+  // },
+  // {
+  //   key: "/jobs/{number}", // add an id based on the jobs id
+  //   label: "Home",
+  //   icon: <HomeOutlined />,
+  // },
 ];
 
 const MenuUser = () => {
