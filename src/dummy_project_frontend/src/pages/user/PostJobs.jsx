@@ -3,7 +3,7 @@ import TextArea from "antd/es/input/TextArea";
 import dayjs from "dayjs";
 import React from "react";
 import { jobs_backend } from 'declarations/jobs_backend';
-import toast from "react-hot-toast";
+import toast, { Toaster } from "react-hot-toast";
 
 const { Title } = Typography;
 
@@ -57,6 +57,7 @@ const PostJobs = () => {
 
   return (
     <section className="my-20 mx-40">
+      <Toaster position="top-right" />
       <Title>Create a Jobs</Title>
       <Divider style={{ borderColor: "#fff" }} />
       <Form

@@ -22,24 +22,24 @@ const { Meta } = Card
 const { Dragger } = Upload
 
 const dates = [
-  "7 October 2024",
-  "31 September 2024 ",
-  "03 October 2024",
-  "7 October 2024",
-  "31 September 2024 ",
-  "03 October 2024",
-  "7 October 2024",
-  "31 September 2024 ",
-  "03 October 2024",
-  "7 October 2024",
-  "31 September 2024 ",
-  "03 October 2024",
-  "7 October 2024",
-  "31 September 2024 ",
-  "03 October 2024",
-  "7 October 2024",
-  "31 September 2024 ",
-  "03 October 2024",
+	"7 October 2024",
+	"31 September 2024 ",
+	"03 October 2024",
+	"7 October 2024",
+	"31 September 2024 ",
+	"03 October 2024",
+	"7 October 2024",
+	"31 September 2024 ",
+	"03 October 2024",
+	"7 October 2024",
+	"31 September 2024 ",
+	"03 October 2024",
+	"7 October 2024",
+	"31 September 2024 ",
+	"03 October 2024",
+	"7 October 2024",
+	"31 September 2024 ",
+	"03 October 2024",
 ]
 
 const JobCard = (props) => {
@@ -57,36 +57,6 @@ const JobCard = (props) => {
 
 	const [isDescriptionModalVisible, setIsDescriptionModalVisible] = useState(false)
 	const [isApplicationModalVisible, setIsApplicationModalVisible] = useState(false)
-  
-  return (
-    <Card
-      loading={loading} // ini gw add aja, jadi cmn 1 state dmn semua card jd loading (biar cepet aja wkwk)
-      actions={[<FileAddOutlined key="add" onClick={() => onAddJob(props)} />]}>
-      <Meta
-        avatar={
-          <Avatar src={`/img/jobs/avatar${id}.svg`} />
-        }
-        title={jobTitle}
-      />
-      <div className="mb-4" />
-      <div className="flex gap-2">
-        <Tooltip title="Company">
-          <ShopOutlined />
-        </Tooltip>
-        {company}
-      </div>
-      <div className="flex gap-2">
-        <Tooltip title="Registration End Date">
-          <FieldTimeOutlined />
-        </Tooltip>
-        {dates[id]}
-      </div>
-      <div className="mb-2" />
-      <Paragraph style={{ marginBottom: 0 }}>{description}</Paragraph>
-    </Card>
-  );
-};
-
 	const showDescriptionModal = () => {
 		setIsDescriptionModalVisible(true)
 	}
@@ -137,9 +107,7 @@ const JobCard = (props) => {
 				actions={[<FileAddOutlined key="add" onClick={handleAddJob} />]}>
 				<Meta
 					avatar={
-						<Avatar
-							src={`https://api.dicebear.com/7.x/miniavs/svg?seed=${id}`}
-						/>
+						<Avatar src={`/img/jobs/avatar${id}.svg`} />
 					}
 					title={jobTitle}
 				/>
@@ -154,7 +122,7 @@ const JobCard = (props) => {
 					<Tooltip title="Registration End Date">
 						<FieldTimeOutlined />
 					</Tooltip>
-					{/* {dayjs(registrationEndDate).toString()} */}
+					{dates[id]}
 				</div>
 				<div className="mb-2" />
 				<Paragraph
