@@ -2,6 +2,7 @@ import { Button, DatePicker, Divider, Form, Input, Typography } from "antd";
 import TextArea from "antd/es/input/TextArea";
 import dayjs from "dayjs";
 import React from "react";
+import toast from "react-hot-toast";
 
 const { Title } = Typography;
 
@@ -27,6 +28,9 @@ const PostJobs = () => {
   // registrationEndDate pake dayjs paling ke ISO String (toISOString) aja
   const onSubmit = (values) => {
     console.log(values);
+
+    form.resetFields();
+    toast.success("Your job is listed now");
   };
 
   // kalau pas submit ada error (di sisi frontend)
