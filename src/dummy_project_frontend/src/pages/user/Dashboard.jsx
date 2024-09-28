@@ -11,7 +11,7 @@ const Dashboard = () => {
       <p className="text-xl">
         To Start you can choose the menu on the left side
       </p>
-      <Divider />
+      <Divider style={{ borderColor: "#fff" }} />
       <Button
         onClick={() => {
           navigate("/jobs/find");

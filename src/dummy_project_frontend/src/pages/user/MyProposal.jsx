@@ -1,14 +1,9 @@
-import { Button, Table, Tag, Typography, Input, Space, DatePicker } from "antd";
+import { Button, Divider, Table, Tag, Typography } from "antd";
 import dayjs from "dayjs";
-import {
-  CheckCircleOutlined,
-  SyncOutlined,
-  SearchOutlined,
-} from "@ant-design/icons";
-import React, { useRef, useState } from "react";
+import { CheckCircleOutlined, SyncOutlined } from "@ant-design/icons";
+import React, { useState } from "react";
 
-const { Paragraph } = Typography;
-const { RangePicker } = DatePicker;
+const { Paragraph, Title } = Typography;
 
 const dummyData = [
   {
@@ -127,6 +122,8 @@ const MyProposal = () => {
   ];
   return (
     <>
+      <Title>My Proposal</Title>
+      <Divider style={{ borderColor: "#fff" }} />
       <Table
         expandable={{
           expandRowByClick: true,
