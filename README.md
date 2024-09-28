@@ -18,7 +18,7 @@
 ## Mengapa anda harus memilih PYK?
 
 ### 1. Profil Terdesentralisasi
-Dengan PYK, Anda memiliki kendali penuh atas data dan reputasi Anda yang tersimpan di blockchain. Tidak seperti platform tradisional, di mana data pengguna dapat dimanipulasi atau dihapus, PYK memastikan bahwa informasi Anda aman dan transparan. Anda dapat membangun portofolio yang mencerminkan keterampilan dan pengalaman Anda, serta mendapatkan kepercayaan dari klien dengan transparansi yang tinggi.
+Dengan Internet Identity, Anda memiliki kendali penuh atas data dan reputasi Anda yang tersimpan di blockchain. Tidak seperti platform tradisional, di mana data pengguna dapat dimanipulasi atau dihapus, PYK memastikan bahwa informasi Anda aman dan transparan. Anda dapat membangun portofolio yang mencerminkan keterampilan dan pengalaman Anda, serta mendapatkan kepercayaan dari klien dengan transparansi yang tinggi.
 
 ### 2. Smart Contract Escrow
 Keamanan adalah prioritas utama kami. PYK menggunakan escrow berbasis kontrak pintar untuk memastikan bahwa pembayaran dilakukan dengan aman. Uang klien akan disimpan dalam escrow hingga pekerjaan selesai dan disetujui, memberikan perlindungan bagi kedua belah pihak. Dengan sistem ini, Anda tidak perlu khawatir tentang penipuan atau pembayaran yang tidak aman.
