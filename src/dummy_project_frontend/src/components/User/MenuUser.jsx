@@ -50,6 +50,7 @@ const MenuUser = () => {
   useEffect(() => {
     console.log(location.pathname);
     setSelectedKey(location.pathname);
+    if (location.pathname == "/jobs") navigate("/jobs/home");
   }, [location.pathname]);
 
   const onClick = (e) => {
@@ -61,6 +62,7 @@ const MenuUser = () => {
     <Menu
       onClick={onClick}
       theme="dark"
+      style={{ background: "#141414" }}
       selectedKeys={[selectedKey]}
       defaultOpenKeys={["jobMenu"]}
       mode="inline"

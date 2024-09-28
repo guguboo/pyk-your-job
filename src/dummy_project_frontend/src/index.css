@@ -9,8 +9,16 @@ body {
   padding: 0;
   width: 100%;
   overflow-x: hidden;
-  background-color: #0E0E0E;
-  color: #FFFFFF
+  background-color: #0e0e0e;
+  color: #ffffff;
+}
+
+.ant-menu-item-selected {
+  background-color: #54a6c7 !important;
+}
+
+.ant-menu-sub {
+  background: #2f2f2f !important;
 }
 
 /* img {

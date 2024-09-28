@@ -9,6 +9,12 @@ import Forbidden from "./pages/status/403";
 import NotFound from "./pages/status/404";
 import { authManager } from "./functions/authManager";
 import toast from "react-hot-toast";
+import Dashboard from "./pages/user/Dashboard";
+import DiscoverJobs from "./pages/user/DiscoverJobs";
+import PostJobs from "./pages/user/PostJobs";
+import MyProposal from "./pages/user/MyProposal";
+import UserTemplate from "./components/User/UserTemplate";
+import { ConfigProvider, theme } from "antd";
 
 export const AuthContext = createContext(null);
 
@@ -27,13 +33,6 @@ function ProtectedRoute({ element }) {
 
   return isAuthenticated ? element : <Navigate to="/403" replace />;
 }
-
-import Dashboard from "./pages/user/Dashboard";
-import DiscoverJobs from "./pages/user/DiscoverJobs";
-import PostJobs from "./pages/user/PostJobs";
-import MyProposal from "./pages/user/MyProposal";
-import UserTemplate from "./components/User/UserTemplate";
-import { ConfigProvider, theme } from "antd";
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);

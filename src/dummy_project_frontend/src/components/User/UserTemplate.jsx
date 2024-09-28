@@ -17,6 +17,7 @@ const UserTemplate = (props) => {
     bottom: 0,
     scrollbarWidth: "thin",
     scrollbarColor: "unset",
+    background: "#141414",
   };
 
   return (
