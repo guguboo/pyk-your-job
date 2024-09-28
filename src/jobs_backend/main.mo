@@ -37,7 +37,7 @@ actor {
 
     // This function acts like a GET request
     public query func getJobs() : async [Job] {
-        Debug.print("Number of jobs: " # debug_show(jobs.size()));
+        // Debug.print("Number of jobs: " # debug_show(jobs.size()));
         jobs
     };
 
@@ -59,7 +59,7 @@ actor {
     };
 
     public shared query (msg) func whoami() : async Text {
-    Debug.print("Caller: " # Principal.toText(msg.caller));
+    // Debug.print("Caller: " # Principal.toText(msg.caller));
     Principal.toText(msg.caller)
     };
 }

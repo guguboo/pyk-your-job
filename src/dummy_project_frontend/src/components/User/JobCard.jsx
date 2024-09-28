@@ -12,6 +12,7 @@ const { Meta } = Card;
 
 const JobCard = (props) => {
   const {
+    key,
     id,
     creatorId, // ga tau diapain
     completed, // ga tau diapain 2
@@ -45,7 +46,7 @@ const JobCard = (props) => {
         <Tooltip title="Registration End Date">
           <FieldTimeOutlined />
         </Tooltip>
-        {dayjs(registrationEndDate).toString()}
+        {/* {dayjs(registrationEndDate).toString()} */}
       </div>
       <div className="mb-2" />
       <Paragraph style={{ marginBottom: 0 }}>{description}</Paragraph>

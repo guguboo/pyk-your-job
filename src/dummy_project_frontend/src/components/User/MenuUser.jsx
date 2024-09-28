@@ -60,6 +60,7 @@ const MenuUser = () => {
 
   return (
     <Menu
+      key={location.pathname} // Adding a key to force re-render
       onClick={onClick}
       theme="dark"
       style={{ background: "#141414" }}

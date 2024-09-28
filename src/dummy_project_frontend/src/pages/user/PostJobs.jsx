@@ -38,14 +38,15 @@ const PostJobs = () => {
     const creatorId = await jobs_backend.whoami()
     try {
       await jobs_backend.addJob(values.jobTitle, creatorId, values.company, Number(duration), values.description);
-      console.log('Successful adding Job') //ini bisa dikasih toast atau apa
-      } catch (error) {
+      // console.log('Successful adding Job') //ini bisa dikasih toast atau apa
+      toast.success("Your job is listed now");
+    } catch (error) {
       console.error('Error adding job:', error);
+      toast.error("Error adding job, please try again!");
       }
     console.log(values);
 
     form.resetFields();
-    toast.success("Your job is listed now");
   };
 
   // kalau pas submit ada error (di sisi frontend)
