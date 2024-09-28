@@ -3,6 +3,7 @@ import TextArea from "antd/es/input/TextArea";
 import dayjs from "dayjs";
 import React from "react";
 import { jobs_backend } from 'declarations/jobs_backend';
+import toast from "react-hot-toast";
 
 const { Title } = Typography;
 
@@ -42,6 +43,9 @@ const PostJobs = () => {
       console.error('Error adding job:', error);
       }
     console.log(values);
+
+    form.resetFields();
+    toast.success("Your job is listed now");
   };
 
   // kalau pas submit ada error (di sisi frontend)
