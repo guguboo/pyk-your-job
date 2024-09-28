@@ -160,15 +160,15 @@ Kami memiliki rencana yang jelas untuk pengembangan PYK ke depan. Berikut adalah
 
 | Landing Page | Dashboard     |
 | :-------- | :------- |
-| ![Image 1](src\dummy_project_frontend\public\img\readme\image1.png) | ![Image 2](src\dummy_project_frontend\public\img\readme\image2.png) |
+| ![Image 1](src/dummy_project_frontend/public/img/readme/image1.png) | ![Image 2](src/dummy_project_frontend/public/img/readme/image2.png) |
 
 | Discover Jobs | Create a Jobs     |
 | :-------- | :------- |
-| ![Image 3](src\dummy_project_frontend\public\img\readme\image3.png) | ![Image 4](src\dummy_project_frontend\public\img\readme\image4.png) |
+| ![Image 3](src/dummy_project_frontend/public/img/readme/image3.png) | ![Image 4](src/dummy_project_frontend/public/img/readme/image4.png) |
 
 | My Proposal | See Active Jobs     |
 | :-------- | :------- |
-| ![Image 5](src\dummy_project_frontend\public\img\readme\image5.png) | ![Image 6](src\dummy_project_frontend\public\img\readme\image6.png) |
+| ![Image 5](src/dummy_project_frontend/public/img/readme/image5.png) | ![Image 6](src/dummy_project_frontend/public/img/readme/image6.png) |
 
 
 ## Referensi
