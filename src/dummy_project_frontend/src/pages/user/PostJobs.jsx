@@ -39,13 +39,13 @@ const PostJobs = () => {
     try {
       await jobs_backend.addJob(values.jobTitle, creatorId, values.company, Number(duration), values.description);
       // console.log('Successful adding Job') //ini bisa dikasih toast atau apa
-      toast.success("Your job is listed now");
     } catch (error) {
       console.error('Error adding job:', error);
       toast.error("Error adding job, please try again!");
-      }
+    }
     console.log(values);
-
+    
+    toast.success("Your job is listed now");
     form.resetFields();
   };
 

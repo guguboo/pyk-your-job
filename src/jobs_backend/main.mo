@@ -62,7 +62,7 @@ actor {
         };
         jobs := Array.append(jobs, [job]);
         nextId += 1;
-        addUserJob(creatorId, job);
+        await addUserJob(creatorId, job);
         nextId - 1
         
     };
