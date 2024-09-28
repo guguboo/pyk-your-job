@@ -2,6 +2,7 @@ import { Button, DatePicker, Divider, Form, Input, Typography } from "antd";
 import TextArea from "antd/es/input/TextArea";
 import dayjs from "dayjs";
 import React from "react";
+import { jobs_backend } from 'declarations/jobs_backend';
 
 const { Title } = Typography;
 
@@ -25,7 +26,21 @@ const PostJobs = () => {
 
   // kalau berhasil di submit di sini
   // registrationEndDate pake dayjs paling ke ISO String (toISOString) aja
-  const onSubmit = (values) => {
+  const onSubmit =  async (values) => {
+    const targetDate = values.registrationEndDate;
+    console.log(targetDate)
+    const currentDate = new Date();
+    const differenceInMilliseconds = targetDate - currentDate;
+    const millisecondsInADay = 24 * 60 * 60 * 1000;
+
+    const duration = Math.ceil(differenceInMilliseconds / millisecondsInADay);
+    const creatorId = await jobs_backend.whoami()
+    try {
+      await jobs_backend.addJob(values.jobTitle, creatorId, values.company, Number(duration), values.description);
+      console.log('Successful adding Job') //ini bisa dikasih toast atau apa
+      } catch (error) {
+      console.error('Error adding job:', error);
+      }
     console.log(values);
   };
 

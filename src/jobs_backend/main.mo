@@ -37,6 +37,7 @@ actor {
 
     // This function acts like a GET request
     public query func getJobs() : async [Job] {
+        Debug.print("Number of jobs: " # debug_show(jobs.size()));
         jobs
     };
 
